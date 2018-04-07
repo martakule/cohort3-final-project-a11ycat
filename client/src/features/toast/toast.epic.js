@@ -1,6 +1,6 @@
 import 'rxjs/add/operator/mergeMap';
 import { Observable } from 'rxjs';
-import { LOCATION_RATING_TYPES } from './location-rating.types';
+import { LOCATION_RATING_TYPES } from '../location-rating/location-rating.types';
 import { createShowToastAction } from './toast.actions';
 
 export const SuccessToastEpic = action$ =>

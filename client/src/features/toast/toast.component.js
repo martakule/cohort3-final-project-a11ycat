@@ -1,6 +1,6 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
-import { variables } from '../ui-kit/variables';
+import { variables } from '../../ui-kit/variables';
 
 export const ToastComponent = props => {
   if (props.showToast) {
