@@ -6,7 +6,7 @@ import { AutoCompleteListContainer } from '../auto-complete-list/auto-complete-l
 import { Link } from 'react-router-dom';
 import { Heading } from '../../ui-kit/heading';
 import { List } from '../../ui-kit/list';
-import { ToastContainer } from '../notification/success.toast.container';
+import { ToastContainer } from '../toast/toast.container';
 
 export class App extends Component {
   componentDidMount() {

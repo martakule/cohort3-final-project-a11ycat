@@ -1,6 +1,6 @@
+import React from 'react';
 import styled, { css } from 'styled-components';
-import { variables } from './variables';
-import React, { Component } from 'react';
+import { variables } from '../ui-kit/variables';
 
 const StyledToast = styled.div`
   position: fixed;
@@ -30,7 +30,7 @@ const StyledToast = styled.div`
   }
 
   ${props =>
-    props.state === 'success' &&
+    props.level === 'success' &&
     css`
       &:before {
         background: #6cd577;
@@ -38,7 +38,7 @@ const StyledToast = styled.div`
         content: '✔';
       }
     `} ${props =>
-    props.state === 'error' &&
+    props.level === 'error' &&
     css`
       &:before {
         background: #eb6773;
@@ -49,5 +49,5 @@ const StyledToast = styled.div`
 `;
 
 export const Toast = props => {
-  return <StyledToast state={props.state}>{props.message}</StyledToast>;
+  return <StyledToast level={props.level}>{props.message}</StyledToast>;
 };
