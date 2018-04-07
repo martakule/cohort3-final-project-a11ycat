@@ -1,8 +1,17 @@
 import { connect } from 'react-redux';
-import { SuccessToast } from './success-toast.component';
+import { ToastComponent } from './toast.component';
+import { createHideToastAction } from './toast.action';
 
 const mapStateToProps = state => ({
-  location: state.listItemReducer.selectedLocation
+  showToast: false,
+  level: 'success',
+  message: 'something'
 });
 
-export const ToastContainer = connect(mapStateToProps)(SuccessToast);
+const mapDispatchToProps = dispatch => ({
+  hideToast: () => dispatch(createHideToastAction())
+});
+
+export const ToastContainer = connect(mapStateToProps, mapDispatchToProps)(
+  ToastComponent
+);

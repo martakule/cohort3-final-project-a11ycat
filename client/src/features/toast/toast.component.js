@@ -2,6 +2,16 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { variables } from '../ui-kit/variables';
 
+export const ToastComponent = props => {
+  if (props.showToast) {
+    return (
+      <StyledToast onClick={props.hideToast} level={props.level}>
+        {props.message}
+      </StyledToast>
+    );
+  } else return null;
+};
+
 const StyledToast = styled.div`
   position: fixed;
   top: 2em;
@@ -47,7 +57,3 @@ const StyledToast = styled.div`
       }
     `};
 `;
-
-export const Toast = props => {
-  return <StyledToast level={props.level}>{props.message}</StyledToast>;
-};
