@@ -3,9 +3,9 @@ import { ToastComponent } from './toast.component';
 import { createHideToastAction } from './toast.actions';
 
 const mapStateToProps = state => ({
-  showToast: false,
-  level: 'success',
-  message: 'something'
+  showToast: state.ToastReducer.showToast,
+  level: state.ToastReducer.level,
+  message: state.ToastReducer.message
 });
 
 const mapDispatchToProps = dispatch => ({
