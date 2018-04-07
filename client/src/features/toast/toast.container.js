@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import { ToastComponent } from './toast.component';
-import { createHideToastAction } from './toast.action';
+import { createHideToastAction } from './toast.actions';
 
 const mapStateToProps = state => ({
   showToast: false,
