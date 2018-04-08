@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from '../../ui-kit/button';
 import { Heading } from '../../ui-kit/heading';
+import { ToastContainer } from '../toast/toast.container';
 export class LocationRating extends Component {
   accessibilityFeatures = [
     'Accessible parking',
@@ -18,6 +19,7 @@ export class LocationRating extends Component {
     const { savedToDb, location } = this.props;
     return (
       <div>
+        <ToastContainer />
         <Heading>{location.name}</Heading>
         <div>
           {this.accessibilityFeatures.map((feature, index) => (

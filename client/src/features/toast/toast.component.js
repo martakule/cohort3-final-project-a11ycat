@@ -25,6 +25,7 @@ const StyledToast = styled.div`
   background: ${variables.colour.paleGrey};
   color: ${variables.colour.offBlack};
   box-shadow: 4px 4px 12px ${variables.colour.lightGrey};
+  text-align:center;
 
   &:before {
     color: white;
@@ -35,7 +36,7 @@ const StyledToast = styled.div`
     top: 50%;
     transform: translate(0, -50%);
     font-size: 30px;
-    padding: 3px 3px 2px 3px;
+    padding: 3px 3px 2px 5px;
     border-radius: ${variables.circle};
   }
 
