@@ -1,6 +1,6 @@
 import { combineEpics, createEpicMiddleware } from 'redux-observable';
-import { SuccessToastEpic } from './features/toast/toast.epic';
+import { successToastEpic, hideToastEpic } from './features/toast/toast.epic';
 
-const rootEpic = combineEpics(SuccessToastEpic);
+const rootEpic = combineEpics(successToastEpic, hideToastEpic);
 
-export const epicMiddleware = createEpicMiddleware(SuccessToastEpic);
+export const epicMiddleware = createEpicMiddleware(successToastEpic);
