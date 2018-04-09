@@ -11,4 +11,4 @@ REACT_APP_GOOGLE_MAPS_API_KEY=AIzaSyDJeiIC7_v5Q7xk2rcxPZi5bZzWc57B7vQ
 LOG_LEVEL=info # the server will use this log level to ignore anything not important enough to appear in the console
 
 REACT_APP_API_HOST=http://localhost
-REACT_APP_API_PORT=3001```
+REACT_APP_API_PORT=3001
